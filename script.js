@@ -18,3 +18,14 @@ function addBooktoLibrary () {
 
 }
 
+function displayBook() {
+  // looping trough the array
+  myLibrary.forEach((item)=>{
+    let display = document.getElementById('display');
+    let li = document.createElement("div");
+    li.innerText = item;
+    display.append(li);
+  })
+}
+
+displayBook();
