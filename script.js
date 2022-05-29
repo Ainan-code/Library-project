@@ -19,10 +19,9 @@ function addBooktoLibrary () {
 
 }
 
-const book2 = new Book('hokins', 'Ainan', 50);
-const book3 = new Book('hokins', 'Abdi', 50);
 
-myLibrary.push(book2, book3);
+let button = document.getElementById('save-button');
+button.addEventListener("click", displayBook);
 
 
 function displayBook() {
@@ -36,3 +35,9 @@ function displayBook() {
 }
 
 displayBook();
+let NewBook = document.getElementById('new_book');
+NewBook.addEventListener("click", addBook)
+
+Function addBook() {
+  
+}
