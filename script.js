@@ -5,11 +5,11 @@ const closeModal = document.querySelector('.close-button');
 
 
 openModal.addEventListener("click", () => {
-  modal.showModal();
+  modal.style.display = "block";
 });
 
 closeModal.addEventListener("click", () => {
-  modal.close();
+  modal.style.display = "none";
 });
 
 
