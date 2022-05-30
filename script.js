@@ -1,3 +1,18 @@
+
+const openModal = document.querySelector('.open-modal');
+const modal = document.querySelector('.modal');
+const closeModal = document.querySelector('.close-button');
+
+
+openModal.addEventListener("click", () => {
+  modal.showModal();
+});
+
+closeModal.addEventListener("click", () => {
+  modal.close();
+});
+
+
 let myLibrary = [];
 
 function Book(title, author, pages) {
@@ -5,10 +20,15 @@ function Book(title, author, pages) {
     this.author = author
     this.pages = pages
 }
+let NewBook = document.getElementById('new_book');
 
 
 
-function addBooktoLibrary () {
+
+
+
+
+ function addBooktoLibrary () {
   let title = document.getElementById('title');
   let author = document.getElementById('author');
   let page = document.getElementById('page'); 
@@ -34,10 +54,8 @@ function displayBook() {
   }
 }
 
-displayBook();
-let NewBook = document.getElementById('new_book');
-NewBook.addEventListener("click", addBook)
+//displayBook();
 
-Function addBook() {
-  
-}
+
+
+

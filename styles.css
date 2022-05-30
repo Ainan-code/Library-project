@@ -1,9 +1,50 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-div {
-    font-size:medium;
-    color: black;
+body {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+   
+    align-items: center;
+    min-height: 100vh;
+    margin: 2rem;
+    font-family: system-ui;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: gray;
+    
 }
+
+
+
+.modal {
+     padding: 1em;
+    max-width: 50ch;
+     border: 0;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    
+  
+    
+  }
+  
+  .modal::backdrop {
+    background: rgb(0 0 0 / 0.4);
+  }
+  
+  /* extra styling */
+  
+  
+  
+  
+  .button {
+    border: 0;
+    cursor: pointer;
+  }
+
