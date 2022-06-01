@@ -71,7 +71,7 @@ function displayBook() {
 
    remove.addEventListener("click", () => {
       
-    myLibrary.splice(i, 1)
+    /*myLibrary.splice(i, 1)*/
     display.removeChild(div)
 
  })
