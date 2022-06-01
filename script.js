@@ -59,13 +59,24 @@ function displayBook() {
   
   for (let i=0; i < myLibrary.length; i++) {
    let div = document.createElement('div')
+   div.setAttribute('id', i)
+   let remove = document.createElement('button')
   
 
    div.innerText = `Title: ${myLibrary[i].title}  
   Author: ${myLibrary[i].author}  
   Pages:  ${myLibrary[i].pages}`
+   div.appendChild(remove)
    display.appendChild(div)
-  }
+
+   remove.addEventListener("click", () => {
+      
+    myLibrary.splice(i, 1)
+    display.removeChild(div)
+
+ })
+ 
+}
 } 
 
 
