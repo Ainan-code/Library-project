@@ -1,8 +1,14 @@
 
-const openModal = document.querySelector('.open-modal');
-const modal = document.querySelector('.modal');
-const closeModal = document.querySelector('.close-button');
+const openModal = document.querySelector('#addBook');
+const modal = document.querySelector('#popupForm');
+const closeModal = document.querySelector('.cancelBtn');
+let submitBtn = document.getElementById('submitBtn');
+let title = document.getElementById('title');
+let author = document.getElementById('author');
+let page = document.getElementById('page');
+let display = document.getElementById('display');
 
+let myLibrary = [];
 
 openModal.addEventListener("click", () => {
   modal.style.display = "block";
@@ -13,14 +19,13 @@ closeModal.addEventListener("click", () => {
 });
 
 
-let myLibrary = [];
+
 
 function Book(title, author, pages) {
     this.title = title
     this.author = author
     this.pages = pages
 }
-let NewBook = document.getElementById('new_book');
 
 
 
@@ -28,33 +33,42 @@ let NewBook = document.getElementById('new_book');
 
 
 
- function addBooktoLibrary () {
-  let title = document.getElementById('title');
-  let author = document.getElementById('author');
-  let page = document.getElementById('page'); 
+submitBtn.addEventListener("click", addBooktoLibrary);
+
+
+function addBooktoLibrary () {
+  
  
   const newBook = new Book(title.value, author.value, page.value);
-  myLibrary.push(newBook)
+  myLibrary.push(newBook);
+  modal.style.display = "none";
 
 
 }
 
 
-let button = document.getElementById('save-button');
-button.addEventListener("click", displayBook);
 
 
+
+submitBtn.addEventListener("click", displayBook); 
+
+
+ 
 function displayBook() {
   // looping trough the array
-  let display = document.getElementById('display')
+  
   for (let i=0; i < myLibrary.length; i++) {
    let div = document.createElement('div')
-   div.innerText = `${myLibrary[i].title} +  ${myLibrary[i].author} + ${myLibrary[i].pages}`
+  
+
+   div.innerText = `Title: ${myLibrary[i].title}  
+  Author: ${myLibrary[i].author}  
+  Pages:  ${myLibrary[i].pages}`
    display.appendChild(div)
   }
-}
+} 
 
-//displayBook();
+
 
 
 
