@@ -61,6 +61,8 @@ function displayBook() {
    let div = document.createElement('div')
    div.setAttribute('id', i)
    let remove = document.createElement('button')
+   remove.innerText = "Remove"
+   remove.setAttribute("id", "removeBtn")
   
 
    div.innerText = `Title: ${myLibrary[i].title}  
@@ -71,7 +73,7 @@ function displayBook() {
 
    remove.addEventListener("click", () => {
       
-    /*myLibrary.splice(i, 1)*/
+    myLibrary.splice(i, 1)
     display.removeChild(div)
 
  })

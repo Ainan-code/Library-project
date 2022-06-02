@@ -96,14 +96,15 @@ input {
     border: 1px solid saddlebrown; 
     border-radius: 0.4em;
     width: 200px;
-    height: 100px;
+    height: 200px;
     padding: 10px;
     line-height: normal;
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 15px;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     color: whitesmoke;
     background-color: rgb(53, 52, 52);
   }
@@ -114,4 +115,12 @@ input {
       margin-top: 1rem;
       border: none;
       font-size: 24px;
+  }
+
+  .display > div > #removeBtn {
+    width: 100px;
+    border: 1px solid saddlebrown;
+    border-radius: 0.2em;
+    padding: 5px;
+    background-color: rgb(90, 85, 95);
   }
